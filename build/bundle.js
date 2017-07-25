@@ -63,28 +63,58 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
-const sum = (a,b) => a+b;
+var image = document.createElement('img');
+image.src = 'http://lorempixel.com/400/400';
 
-module.exports = sum;
-
+document.body.appendChild(image);
 
 /***/ },
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-const sum = __webpack_require__(0);
+"use strict";
 
-const total = sum(10,5);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var sum = function sum(a, b) {
+  return a + b;
+};
+
+exports.default = sum;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _sum = __webpack_require__(1);
+
+var _sum2 = _interopRequireDefault(_sum);
+
+__webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var total = (0, _sum2.default)(10, 5);
+//just need below to run/execute, no need for exporting 
+//certain codes in image_viewer
+
 console.log(total);
-
 
 /***/ }
 /******/ ]);
