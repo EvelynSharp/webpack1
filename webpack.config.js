@@ -6,7 +6,8 @@ const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'build/'
   },
   module: {
     rules: [
@@ -34,7 +35,7 @@ const config = {
     ]
   },
   plugins: [
-    //take anything from loader, put into style.css file
+    //take anything from css loader, put into style.css file
     new ExtractTextPlugin('style.css')
   ]
 
